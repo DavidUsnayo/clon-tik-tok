@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encender Cámara</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #video {
+      width: 100%;
+      max-width: 640px;
+    }
+  </style>
+</head>
+<body>
+
+<video id="video" autoplay playsinline></video>
+<button onclick="apagarCamara()">Apagar</button>
+<button onclick="encenderCamara()">encender</button>
+
+<script>
+  let stream;
+
+  function apagarCamara() {
+    if (stream) {
+      const tracks = stream.getTracks();
+      tracks.forEach(track => track.stop());
+      video.srcObject = null;
+    }
+  }
+  function encenderCamara() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then((streamObj) => {
+        stream = streamObj;
+        video.srcObject = stream;
+      })
+      .catch((err) => {
+        console.error('Error al encender la cámara:', err);
+      });
+  }
+</script>
+
+</body>
+</html>
+

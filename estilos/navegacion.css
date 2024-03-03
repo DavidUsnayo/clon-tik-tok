@@ -1,0 +1,77 @@
+.navegacion{
+    background:rgb(38, 38, 38);
+    color:white;
+    width:100%;
+    min-height:55px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    
+
+    position:absolute;
+    bottom:0;
+    z-index:8;
+}
+.nav{
+    width:80px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.nav img{
+    width:23px;
+    height:23px;
+}
+.nav p{
+    font-size:11px;
+    font-family:arial;
+    text-align:center;
+}
+
+
+.agregar{
+    width:50px;
+    height:30px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(0, 213, 255), red);
+    border-radius:5px;
+    padding:0px 4px;
+}
+.push{
+    width:100%;
+    height:100%;
+    background:rgb(245, 245, 245);
+    border-radius:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.push p{
+    font-size:25px;
+    color:black;
+}
+
+/* items css */
+.new{
+    background:rgb(0, 0, 0);
+    padding:15px;
+    height:100%;
+}
+.amigos_item,
+.agregar_item,
+.bandeja_item,
+.perfil_item{
+    display:none;
+}
+
+@media(min-width:1000px){
+    .new{
+        margin-bottom:20vh;
+    }
+}
+@media(max-width:500px){
+    .navegacion{
+        position:fixed;
+    }
+}

@@ -1,0 +1,372 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:helvetica;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: #b5b2bd;
+    background: -webkit-linear-gradient(to right, #E9E4F0, #d1cdda); 
+    background: linear-gradient(to right, #E9E4F0, #d0cdd9); 
+
+    height:100vh;
+}
+.main{
+    overflow:hidden;
+    margin:auto;
+    position:relative;
+    box-sizing: border-box;
+    border:17px solid;
+    border-left:6px solid;
+    border-right:6px solid;
+    border-color:rgb(0, 0, 0);
+    border-radius:10px;
+}
+.container{
+    width:400px;
+    height:800px;
+    zoom:0.8;
+    overflow:hidden;
+    overflow:scroll;
+    scroll-snap-type: y mandatory;
+    background:black;
+    position:relative;
+}
+.container::-webkit-scrollbar{
+    width:0;
+    height:0;
+}
+.box-video{
+    position:relative;
+    overflow:hidden;
+    scroll-snap-align:start;
+}
+.video{
+    width:100%;
+    height:800px;
+    border-radius:5px;
+    object-fit: cover;
+}
+.img1{
+    width:60px;
+    height:60px;
+    border-radius:10px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    display:none;
+}
+
+.autor {
+    position: absolute;
+    bottom: 55px;
+    color: white;
+    padding: 17px 10px;
+}
+.autor h2{
+    font-size:16px;
+}
+.autor p{
+    font-size:15px;
+    color:rgb(244, 244, 244);
+}
+.interaction{
+    position:absolute;
+    padding:10px;
+    bottom:55px;
+    right:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    z-index:2;
+    cursor:pointer;
+    user-select: none;
+}
+.interaction p{
+    color:rgb(232, 232, 232);
+    font-size:15px;
+}
+.interaction img{
+    width:35px;
+    height:35px;
+    margin:18px 0px 7px 0px;
+}
+.perfil{
+    width:45px;
+    height:45px;
+    margin:15px 0px;
+    border-radius:50%;
+    background:rgb(95, 95, 95);
+    border:3px solid white;
+    position:relative
+}
+.perfil div{
+    width:25px;
+    height:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgb(236, 2, 2);
+    border-radius:50%;
+    color:white;
+    position:absolute;
+    bottom:-20%;
+    left:25%;
+    font-weight:bold;
+    font-size:20px;
+}
+.music{
+    animation:girar 2s infinite;
+}
+.caja_mensajes{
+    width:100%;
+    height:55vh; 
+    position:absolute;
+    bottom:-800px;
+    background:white;
+    z-index:10;
+    transition:0.7s;
+    border-radius:10px 10px 0px 0px;
+    padding:10px 10px 10px 4px;
+    box-sizing: border-box;
+}
+.comentarios{
+    overflow:scroll;
+    height:48vh;
+}
+.comentarios::-webkit-scrollbar{
+    width:0;
+}
+.barra{
+    display:flex;
+    justify-content:space-between;
+    margin:5px 0px;;
+}
+.barra h2{
+    color:white;
+}
+.barra p:nth-child(3){
+    cursor:pointer;
+}
+.enviar{
+    position:absolute;;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:white;
+}
+.send{
+    background:#f1f1f1;
+    width:100%;
+    border-radius:20px;
+    overflow:hidden;
+    padding:5px;
+    display:flex;
+    align-items:center;
+}
+.send p{
+    font-weight:bold;
+    font-size:24px;
+    margin-right:10px;
+}
+.send img{
+    width:28px;
+}
+.fl{
+    display:none;
+    margin-left:10px;
+}
+.enviar input{
+    font-size:17px;
+    padding:8px;
+    border-radius:10px;
+    background:#f1f1f1;
+    border:0;
+    width:100%;
+    outline:0;
+}
+.caja_send{
+    display:flex;
+    align-items:center;
+    padding:10px;
+}
+.circle{
+    width:33px;
+    height:30px;
+    background:rgb(34, 31, 74);
+    border-radius:50%;
+    margin-right:5px;
+}
+.emojis{
+    padding:10px 0px;
+    display:flex;
+    justify-content:space-around;
+    font-size:28px;
+    cursor:pointer;
+}
+.usuario{
+    display:flex;
+    width:100%;
+    margin:20px 0px;
+}
+.us-1 div{
+    width:33px;
+    height:33px;
+    background:rgb(76, 100, 110);
+    border-radius:50%;
+    margin:5px 7px 0px 4px;
+}
+
+.us-2{
+    width:100%;
+}
+.us-2 p{
+    margin:2px 0px 3px 0px;
+    color:rgb(93, 93, 93);
+}
+.us-2 p span{
+    font-size:14px;
+    color:rgb(156, 156, 156);
+    margin-right:15px;
+}
+.us-2 div{
+    display:flex;
+    justify-content:space-between;
+    font-size:15px;
+    color:rgb(97, 97, 97);
+}
+.us-2 h4{
+    font-weight:normal;
+    color:rgb(107, 107, 107);
+    font-family:arial
+}
+.us-2 img{
+    width:17px;
+    margin-left:20px;
+    margin-right:3px;
+}
+.us-2 div p:nth-child(2){
+    font-size:12px;
+    display:flex;
+}
+.heart span{
+    margin-top:1px;
+}
+
+/* estilos de la clase compartir */
+.compartir{
+    position:absolute;
+    bottom:-1vh;
+    background:white;
+    width:100%;
+    height:0vh;
+    z-index:10;
+    box-sizing: border-box;
+    overflow:hidden;
+    transition:0.5s;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-bottom:9px solid black;
+    border-radius:0px 0px 10px 10px;
+}
+.co{
+    height:40vh;
+}
+.one{
+    display:flex;
+    padding:10px;
+    overflow:scroll;
+}
+.one::-webkit-scrollbar{
+    height:0;
+    width:0;
+}
+.two{
+    width:41px;
+    height:70px;
+    margin:0px 10px;
+}
+.two div{
+    width:41px;
+    height:41px;
+    background:rgb(245, 245, 245);
+    border-radius:50%;
+}
+.two p{
+    text-align:center;
+    font-size:10px;
+    margin-top:5px;
+    color:#3c3c3c
+}
+.share_2{
+    margin:10px 0px 3px 0px;
+}
+.share_2 img{
+    width:100%;
+    border-radius:50%;
+}
+hr{
+    opacity:30%;
+    margin:0px 10px
+}
+.br{
+    margin:0;
+}
+
+
+
+@keyframes girar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media(min-width:1600px){
+    .main{
+        zoom:1.3;
+    }
+    .co{
+        height:32vh;
+    }
+}
+@media(min-width:1500px){
+    .main{
+        zoom:1;
+    }
+}
+@media(max-width:500px){
+    .main{
+        width:100vh;
+        border:0;
+        border-radius:0;
+    }
+    .container{
+        width:100%;
+        height:100vh;
+        zoom:1;
+    }
+    .video{
+        height:100vh;
+        border-radius:0;
+    }
+    .caja_mensajes{
+        height:65vh;
+        position:fixed;
+    }
+    .compartir{
+        border:0;
+        border-radius:0;
+    }
+    .two div{
+        width:45px;
+        height:45px;
+    }
+}

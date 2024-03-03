@@ -1,0 +1,154 @@
+.perfil_item{
+    background:white;
+}
+.perfil_item h3,
+.perfil_item p{
+    text-align:center;
+    margin:10px;
+}
+.p{
+    width:100px;
+    height:100px;
+    background:skyblue;
+    border-radius:50%;
+    margin:40px auto 10px auto;
+
+}
+.perfil_item h5{
+    text-align:center;
+    background:#eeeeeea4;
+    border-radius:7px;
+    padding:4px 5px;
+    color:rgb(111, 111, 111);
+    width:50%;
+    margin:5px auto 15px auto;
+}
+.datos{
+    display:flex;
+    justify-content:center;
+}
+.datos div h3{
+    text-align:center;
+}
+.datos div p{
+    text-align:center;
+    margin:0px 10px;
+    color:rgb(160, 160, 160);
+}
+.per p{
+    background:#f3f3f3;
+    padding:8px 15px;
+    border-radius:7px;
+    margin:15px 3px;
+    color:rgb(92, 92, 92);
+}
+.content{
+    display:flex;
+    justify-content:space-between;
+}
+.content p{
+    font-size:20px;
+    padding:4px 6px;
+}
+.cortos{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    height:400px;
+    overflow:scroll;
+}
+.cortos::-webkit-scrollbar{
+    width:0;
+}
+.cortos div{
+    width:110px;
+    height:150px;
+    background:rgb(235, 235, 235);
+    border-radius:10px;
+    margin:2px;
+}
+
+
+/* estilos de Bandeja */
+.bandeja_item{
+    background:white;
+}
+.bandeja_item h3{
+    text-align:center;
+    margin-top:12px;
+    margin-bottom:35px;
+    font-family:arial
+}
+.histories{
+    display:flex;
+    overflow:scroll;
+    width:100%;
+}
+.histories::-webkit-scrollbar{
+    width:0;
+}
+.histories div{
+    width:70px;
+    margin-right:22px;
+}
+.histories div div{
+    width:70px;
+    height:70px;
+    border:3px solid rgb(0, 204, 255);
+    background:rgb(248, 248, 248);
+    border-radius:50%;
+    margin:auto;
+}
+.histories div .crear{
+    background:black;
+    border:3px solid black;
+    position:relative;
+}
+.histories div .crear::after{
+    content:"+";
+    padding:0px 5px;
+    font-size:21px;
+    font-weight:bold;
+    color:white;
+    position:absolute;
+    bottom:-7px;
+    right:-7px;
+    background:rgb(0, 204, 255);
+    border-radius:50%;
+    border:4px solid white;
+}
+.histories div p{
+    color:rgb(99, 99, 99);
+    font-size:14px;
+    text-align: center;
+    margin:10px 0px;
+}
+
+.noti .not{
+    display:flex;
+    align-items:center;
+    margin:20px 0px;
+}
+.not div{
+    margin-left:10px;
+}
+.not img{
+    width:100%;
+}
+.not div p:nth-child(2){
+    margin-top:3px;
+    color:rgb(117, 117, 117);
+}
+.not h2{
+    width:42px;
+    height:42px;
+    padding:10px;
+    border-radius:50%;
+    background:skyblue;
+}
+.noti_2 h2{
+    background:rgb(243, 57, 57);
+}
+.noti_3 h2{
+    background:rgb(0, 0, 0);
+}
